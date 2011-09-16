@@ -1,0 +1,13 @@
+/Config/core.php
+/Config/database.php
+/tmp/*
+/tmp/logs/*
+/tmp/sessions/*
+/tmp/tests/*
+/tmp/cache/*
+!tmp/cache/empty
+tmp/cache/models/*
+!tmp/cache/models/empty
+tmp/cache/persistent/*
+!tmp/cache/persistent/empty
+tmp/cache/views/* 

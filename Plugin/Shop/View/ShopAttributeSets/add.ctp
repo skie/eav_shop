@@ -1,0 +1,20 @@
+<div class="shopAttributeSets form">
+<?php echo $this->Form->create('ShopAttributeSet', array('url' => array('action' => 'add')));?>
+	<fieldset>
+ 		<legend><?php echo __('Add Shop Attribute Set');?></legend>
+	<?php
+		echo $this->Form->input('name');
+		echo $this->Form->input('ShopAttribute');
+	?>
+	</fieldset>
+<?php echo $this->Form->end('Submit');?>
+</div>
+<div class="actions">
+	<ul>
+		<li><?php echo $this->Html->link(__('List Shop Attribute Sets'), array('action' => 'index'));?></li>
+		<li><?php echo $this->Html->link(__('List Shop Categories'), array('controller' => 'shop_categories', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Shop Category'), array('controller' => 'shop_categories', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Shop Attributes'), array('controller' => 'shop_attributes', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Shop Attribute'), array('controller' => 'shop_attributes', 'action' => 'add')); ?> </li>
+	</ul>
+</div>
