@@ -1,0 +1,9 @@
+[submodule "Plugin/Utils"]
+	path = Plugin/Utils
+	url = git@github.com:CakeDC/utils.git
+[submodule "Plugin/Categories"]
+	path = Plugin/Categories
+	url = git@github.com:CakeDC/categories.git
+[submodule "Plugin/Migrations"]
+	path = Plugin/Migrations
+	url = git@github.com:CakeDC/migrations.git
