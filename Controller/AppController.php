@@ -31,4 +31,24 @@ App::uses('Controller', 'Controller');
  * @package       Cake.Console.Templates.skel.Controller
  */
 class AppController extends Controller {
+
+	public $components = array('Session', 'Paginator', 
+		'DebugKit.Toolbar',
+		'Auth' => array(
+			'authorize' => array('Shop')
+		), 
+	);
+	
+	public function beforeFilter() {
+		$this->Auth->authenticate = array(
+	        	'Form' => array(
+	        		'fields' => array('username' => 'email', 'password' => 'password'), 
+					'userModel' => 'Users.User',
+					//'scope' => array('User.status' => 1)
+				),
+		);
+		$this->Auth->loginRedirect = array('plugin' => 'shop', 'controller' => 'shop_products', 'action' => 'index');
+		$this->Auth->loginAction = array('plugin' => 'users', 'controller' => 'users', 'action' => 'login');
+		$this->Auth->authError = __("Sorry, you can't access the page requested", true);
+	}
 }
